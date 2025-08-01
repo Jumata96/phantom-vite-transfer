@@ -1,0 +1,85 @@
+/* src/style.css */
+:root {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0b1221;
+  color: #e6edf3;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  width: 100%;
+  max-width: 560px;
+  background: #111a34;
+  border: 1px solid #1f2a4a;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+p {
+  margin: 0 0 16px;
+  opacity: .85;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 12px 0;
+}
+
+button {
+  border: 1px solid #2f3a5f;
+  background: #1a2447;
+  color: #e6edf3;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: transform .04s ease, opacity .2s ease;
+}
+
+button:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.ok {
+  color: #7ee787;
+}
+
+.warn {
+  color: #ffb454;
+}
+
+.err {
+  color: #ff6b6b;
+}
+
+.muted {
+  opacity: .75;
+}
+
+code, .mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+.pill {
+  display: inline-block;
+  border: 1px solid #2f3a5f;
+  background: #0f1530;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  margin-right: 6px;
+}
