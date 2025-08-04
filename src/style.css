@@ -1,85 +1,137 @@
 /* src/style.css */
-:root {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
-}
 
+/* Estilo global */
 body {
-  margin: 0;
-  background: #0b1221;
+  font-family: 'Roboto', sans-serif;
+  background-color: #131a29;
   color: #e6edf3;
-  display: grid;
-  place-items: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  flex-direction: column;
 }
 
+/* Contenedor principal */
 .card {
-  width: 100%;
-  max-width: 560px;
-  background: #111a34;
-  border: 1px solid #1f2a4a;
+  background: #1c2a43;
   border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  width: 90%;
+  max-width: 480px;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
 h1 {
-  margin: 0 0 8px;
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffd700;
 }
 
-p {
-  margin: 0 0 16px;
-  opacity: .85;
+h2 {
+  font-size: 18px;
+  color: #c9d1d9;
 }
 
-.row {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin: 12px 0;
-}
-
+/* Estilo para botones */
 button {
-  border: 1px solid #2f3a5f;
-  background: #1a2447;
+  background-color: #282f46;
+  border: 2px solid #3e4a71;
   color: #e6edf3;
+  font-size: 16px;
+  padding: 12px 25px;
+  margin: 10px;
   border-radius: 10px;
-  padding: 10px 14px;
   cursor: pointer;
-  transition: transform .04s ease, opacity .2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
 }
 
 button:disabled {
-  opacity: .5;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
-.ok {
-  color: #7ee787;
+button:hover:not(:disabled) {
+  background-color: #3e4a71;
+  transform: translateY(-2px);
 }
 
-.warn {
-  color: #ffb454;
+button:active {
+  transform: translateY(2px);
 }
 
-.err {
-  color: #ff6b6b;
-}
-
-.muted {
-  opacity: .75;
-}
-
-code, .mono {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+/* Estados de Conexión */
+.status {
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: bold;
 }
 
 .pill {
   display: inline-block;
-  border: 1px solid #2f3a5f;
-  background: #0f1530;
-  padding: 6px 10px;
+  padding: 6px 12px;
+  font-size: 14px;
   border-radius: 999px;
-  font-size: 12px;
-  margin-right: 6px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.pill-ok {
+  background-color: #7ee787;
+  color: #fff;
+}
+
+.pill-warn {
+  background-color: #ffb454;
+  color: #fff;
+}
+
+.pill-err {
+  background-color: #ff6b6b;
+  color: #fff;
+}
+
+.pill-muted {
+  background-color: #5c6b8b;
+  color: #fff;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Cuenta y Balance */
+.mono {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+}
+
+.account, .balance {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+hr {
+  margin: 20px 0;
+  border-color: #1f2a4a;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.card {
+  animation: fadeIn 0.8s ease-out;
 }
