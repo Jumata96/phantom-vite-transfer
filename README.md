@@ -2,7 +2,8 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-![Uploading image.png…]()
+
+<img width="741" height="644" alt="image" src="https://github.com/user-attachments/assets/befddad6-1f35-413a-9d0d-0682a81bd873" />
 
 
 # Solana Phantom Wallet Integration
